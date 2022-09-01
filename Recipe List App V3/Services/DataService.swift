@@ -8,7 +8,7 @@
 import Foundation
 
 class DataService {
-    func getLocalData() -> [Recipe]{
+    static func getLocalData() -> [Recipe]{
         
         // Parse local json file
         
