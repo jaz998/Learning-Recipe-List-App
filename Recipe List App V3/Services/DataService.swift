@@ -23,7 +23,15 @@ class DataService {
         // Create a url object
         let url = URL(fileURLWithPath: pathString!)
         
-        // Create a data object
+        do {
+            // Create a data object
+            let Data = try Data(contentsOf: url)
+        }
+        catch {
+            print(error)
+        }
+        
+       
         
         // Decode the data with a json decoder
         
