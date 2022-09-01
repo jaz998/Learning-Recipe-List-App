@@ -20,8 +20,8 @@ class DataService {
             return [Recipe]()
         }
         
-        
         // Create a url object
+        let url = URL(fileURLWithPath: pathString!)
         
         // Create a data object
         
