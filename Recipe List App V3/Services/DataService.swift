@@ -15,6 +15,12 @@ class DataService {
         // Get a url path to the json file
         let pathString = Bundle.main.path(forResource: "recipes", ofType: "data")
         
+        // Check if path string is not nil
+        guard pathString != nil else {
+            return [Recipe]()
+        }
+        
+        
         // Create a url object
         
         // Create a data object
