@@ -13,7 +13,7 @@ class DataService {
         // Parse local json file
         
         // Get a url path to the json file
-        let pathString = Bundle.main.path(forResource: "recipes", ofType: "data")
+        let pathString = Bundle.main.path(forResource: "recipes", ofType: "json")
         
         // Check if path string is not nil
         guard pathString != nil else {
