@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+class RecipeModel: ObservableObject {
+    
+    var recipes = [Recipe]()
+    
+    
+    
+    
+}
