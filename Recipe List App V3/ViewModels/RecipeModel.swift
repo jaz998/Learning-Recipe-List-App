@@ -13,6 +13,8 @@ class RecipeModel: ObservableObject {
     
     init(){
         
+        
+        
     }
     
     
