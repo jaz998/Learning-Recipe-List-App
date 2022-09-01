@@ -25,19 +25,37 @@ class DataService {
         
         do {
             // Create a data object
-            let Data = try Data(contentsOf: url)
+            let data = try Data(contentsOf: url)
+            
+            // Decode the data with a json decoder
+            var decoder = JSONDecoder()
+            
+            do {
+                let recipeData = try decoder.decode([Recipe].self, from: data)
+                
+                // Add the unique IDs
+                for r in recipeData {
+                    r.id=UUID()
+                }
+                
+                // Return the recipes
+                return recipeData
+            }
+            catch {
+                // Decoding json error
+                print(error)
+            }
+            
+
         }
         catch {
+            // Reading json error
             print(error)
         }
         
        
         
-        // Decode the data with a json decoder
-        
-        // Add the unique IDs
-        
-        // Return the recipes
+
         
         return [Recipe]()
     }
